@@ -1,0 +1,167 @@
+@import 'reset';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e4eff4;
+    font-family: 'Raleway';
+}
+
+.main-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.account-info {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    border-bottom: 1px solid #e4eff4;
+
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px 30px;
+
+    &__block {
+        display: flex;
+        width: 45%;
+        font-size: 20px;
+
+        & label {
+            width: 30%;
+            color: #4a4a4a;
+        }
+
+        & span.value {
+            margin-left: 10px;
+            color: #8a8a8a;
+        }
+
+        &:nth-child(odd){
+            margin-right: 20px;
+        }
+    }
+}
+
+.debit-credit-list {
+    width: 100%;
+    height: 80%;
+    overflow-y: auto;
+    background-color: #f7fbfc;
+    padding: 10px 20px;
+
+    &__item {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #e4eff4;
+        }
+    }
+
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        box-shadow: inset 0 0 5px rgba(0,0,0,0.5); 
+    }
+}
+
+.item-block {
+    display: flex;
+    flex-flow: row wrap;
+    width: 32%;
+    margin-right: 10px;
+    padding: 10px;
+    color: #4a5258;
+
+    & label {
+        width: 30%;
+    }
+
+    & span.value {
+        margin-left: 10px;
+        color: #7b7b7b;
+    }
+
+    &--full {
+        width: 100%;
+        margin: 0;
+
+        & p.value {
+            width: 100%;
+            padding: 10px;
+            color: #7b7b7b;
+        }
+    }
+}
+
+.debit {
+    background-color: rgba(0, 128, 0, 0.05);
+}
+
+.credit {
+    background-color: rgba(255, 0, 0, 0.05);
+}
+
+.unavailable {
+    display: none;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(218, 218, 218, 0.52);
+
+    & h1 {
+        font-size: 30px;
+    }
+}
+
+/* Phone Portrait and Landscape */
+@media screen  
+  and (max-width: 768px) {
+      .account-info {
+          padding: 10px;
+
+          &__block {
+              width: 100%;
+
+              & label {
+                  width: 40%;
+              }
+
+              &:nth-child(odd){
+                  margin: 0;
+              }
+          }
+      }
+
+      .item-block {
+          width: 100%;
+      }
+}

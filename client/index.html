@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Account balance</title>
+        <meta charset = "UTF-8">
+        <meta name = "description" content = "Account debit and credit balance">
+        <meta name = "keywords" content = "account, debit, credit, bank, balance">
+        <meta name = "author" content = "Emir Maljanovic">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+
+        <link rel = "stylesheet" href = "./client/styles/main.css" />
+        <link rel = "stylesheet" href = "./client/fonts/stylesheet.css" />
+    </head>
+    <body>
+        <div class = "main-wrapper">
+            <div class = "account-info">
+                <div class = "account-info__block">
+                    <label>Name:</label>
+                    <span id = "account_name" class = "value"></span>
+                </div>
+                <div class = "account-info__block">
+                    <label>IBAN:</label>
+                    <span id = "account_iban" class = "value"></span>
+                </div>
+                <div class = "account-info__block">
+                    <label>Balance:</label>
+                    <span id = "account_balance" class = "value"></span>
+                </div>
+                <div class = "account-info__block">
+                    <label>Currency:</label>
+                    <span id = "currency" class = "value"></span>
+                </div>
+            </div>
+            <div id = "debit_credit_list" class = "debit-credit-list">
+                
+            </div>
+        </div>
+
+        <div id = "unavailable" class = "unavailable">
+            <h1>The service is not available!</h1>
+        </div>
+
+        <script src = "node_modules/jquery/dist/jquery.min.js"></script>
+        <script src = "./client/scripts/main.js"></script>
+    </body>
+</html>
